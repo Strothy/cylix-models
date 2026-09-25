@@ -15,3 +15,16 @@ The point cloud tracker in Cylix's Track panel. [AllTracker](https://github.com/
 The only change from a plain export: in the window graphs, `allowzero` is set to 0 on the Reshape nodes that never see a zero dimension, so DirectML accepts them. The results are the same.
 
 Cylix checks each file's full SHA-256 after download.
+
+## Parakeet (release `parakeet-v3`)
+
+The speech recognition for Cylix's voice commands (English, German and 23 more languages). [parakeet-tdt-0.6b-v3](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3) is by NVIDIA and is under **CC BY 4.0**, not the MIT licence above: see the release's [LICENSE.md](https://github.com/Strothy/cylix-models/releases/download/parakeet-v3/LICENSE.md). These files are the int8 ONNX export by the [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) project (k2-fsa), redistributed unchanged. NVIDIA does not endorse Cylix.
+
+| File | What | SHA-256 |
+|---|---|---|
+| `encoder.int8.onnx` | the audio encoder | `acfc2b44…` |
+| `decoder.int8.onnx` | the prediction network | `179e50c4…` |
+| `joiner.int8.onnx` | the joint network (tokens + durations) | `3164c13f…` |
+| `tokens.txt` | the token list | `d5854467…` |
+
+Full hashes and sizes are in the release notes.
