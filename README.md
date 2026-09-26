@@ -28,3 +28,17 @@ The speech recognition for Cylix's voice commands (English, German and 23 more l
 | `tokens.txt` | the token list | `d5854467…` |
 
 Full hashes and sizes are in the release notes.
+
+## Kokoro British voice (release `kokoro-gb-v1`)
+
+The British voice for Cylix's voice assistant. Everything here is under the **Apache License 2.0** ([LICENSE.md](https://github.com/Strothy/cylix-models/releases/download/kokoro-gb-v1/LICENSE.md) lists each file's origin and changes; [the licence text](https://github.com/Strothy/cylix-models/releases/download/kokoro-gb-v1/LICENSE-Apache-2.0.txt)). No GPL: no espeak-ng.
+
+| File | What | From |
+|---|---|---|
+| `model.onnx` | Kokoro-82M v1.0 | [hexgrad](https://huggingface.co/hexgrad/Kokoro-82M), ONNX export by sherpa-onnx |
+| `voices.bin` | the voice styles | hexgrad, packed by sherpa-onnx |
+| `tokens.txt` | phoneme ids | same |
+| `lexicon-gb-en.txt` | British pronunciation dictionary | [misaki](https://github.com/hexgrad/misaki) by hexgrad |
+| `g2p-en-gb.onnx` | fallback for unknown words | [PeterReid](https://huggingface.co/PeterReid/graphemes_to_phonemes_en_gb), exported to ONNX for Cylix |
+
+Full hashes and sizes are in the release notes. The authors do not endorse Cylix.
