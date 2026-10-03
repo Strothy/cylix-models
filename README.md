@@ -16,29 +16,10 @@ The only change from a plain export: in the window graphs, `allowzero` is set to
 
 Cylix checks each file's full SHA-256 after download.
 
-## Parakeet (release `parakeet-v3`)
+## Model pack P (release `parakeet-v3`)
 
-The speech recognition for Cylix's voice commands (English, German and 23 more languages). [parakeet-tdt-0.6b-v3](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3) is by NVIDIA and is under **CC BY 4.0**, not the MIT licence above: see the release's [LICENSE.md](https://github.com/Strothy/cylix-models/releases/download/parakeet-v3/LICENSE.md). These files are the int8 ONNX export by the [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) project (k2-fsa), redistributed unchanged. NVIDIA does not endorse Cylix.
+Third-party model files for a Cylix feature. [parakeet-tdt-0.6b-v3](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3) is by NVIDIA and is under **CC BY 4.0**, not the MIT licence above: see the release's [LICENSE.md](https://github.com/Strothy/cylix-models/releases/download/parakeet-v3/LICENSE.md). These files are the int8 ONNX export by the [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) project (k2-fsa), redistributed unchanged. NVIDIA does not endorse Cylix. Files, sizes and full hashes: the release notes.
 
-| File | What | SHA-256 |
-|---|---|---|
-| `encoder.int8.onnx` | the audio encoder | `acfc2b44…` |
-| `decoder.int8.onnx` | the prediction network | `179e50c4…` |
-| `joiner.int8.onnx` | the joint network (tokens + durations) | `3164c13f…` |
-| `tokens.txt` | the token list | `d5854467…` |
+## Model pack K (release `kokoro-gb-v1`)
 
-Full hashes and sizes are in the release notes.
-
-## Kokoro British voice (release `kokoro-gb-v1`)
-
-The British voice for Cylix's voice assistant. Everything here is under the **Apache License 2.0** ([LICENSE.md](https://github.com/Strothy/cylix-models/releases/download/kokoro-gb-v1/LICENSE.md) lists each file's origin and changes; [the licence text](https://github.com/Strothy/cylix-models/releases/download/kokoro-gb-v1/LICENSE-Apache-2.0.txt)). No GPL: no espeak-ng.
-
-| File | What | From |
-|---|---|---|
-| `model.onnx` | Kokoro-82M v1.0 | [hexgrad](https://huggingface.co/hexgrad/Kokoro-82M), ONNX export by sherpa-onnx |
-| `voices.bin` | the voice styles | hexgrad, packed by sherpa-onnx |
-| `tokens.txt` | phoneme ids | same |
-| `lexicon-gb-en.txt` | British pronunciation dictionary | [misaki](https://github.com/hexgrad/misaki) by hexgrad |
-| `g2p-en-gb.onnx` | fallback for unknown words | [PeterReid](https://huggingface.co/PeterReid/graphemes_to_phonemes_en_gb), exported to ONNX for Cylix |
-
-Full hashes and sizes are in the release notes. The authors do not endorse Cylix.
+Third-party model files for a Cylix feature, all under the **Apache License 2.0**: [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) and [misaki](https://github.com/hexgrad/misaki) by hexgrad, a fallback model by [PeterReid](https://huggingface.co/PeterReid/graphemes_to_phonemes_en_gb), ONNX exports by sherpa-onnx. [LICENSE.md](https://github.com/Strothy/cylix-models/releases/download/kokoro-gb-v1/LICENSE.md) lists each file's origin and changes; [the licence text](https://github.com/Strothy/cylix-models/releases/download/kokoro-gb-v1/LICENSE-Apache-2.0.txt). Files, sizes and full hashes: the release notes. The authors do not endorse Cylix.
